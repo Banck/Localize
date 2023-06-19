@@ -62,10 +62,10 @@ fileprivate extension JSON {
     }
 }
 
-class LocalizeJson: LocalizeCommonProtocol {
-
+open class LocalizeJson: LocalizeCommonProtocol {
+    
     /// Create default lang name
-    override init() {
+    public override init() {
         super.init()
         fileName = "lang"
     }
@@ -73,7 +73,7 @@ class LocalizeJson: LocalizeCommonProtocol {
     /// Show all aviable languages with criteria name
     ///
     /// - returns: list with storaged languages code
-    override var availableLanguages: [String] {
+    open override var availableLanguages: [String] {
         var languages: [String] = []
 
         for localeId in NSLocale.availableLocaleIdentifiers {

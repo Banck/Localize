@@ -7,10 +7,10 @@
 
 import Foundation
 
-class LocalizeStrings: LocalizeCommonProtocol {
+open class LocalizeStrings: LocalizeCommonProtocol {
 
     /// Create default lang name
-    override init() {
+    public override init() {
         super.init()
         fileName = "Strings"
     }
@@ -18,7 +18,7 @@ class LocalizeStrings: LocalizeCommonProtocol {
     /// Show all aviable languajes whit criteria name
     ///
     /// - returns: list with storaged languages code
-    override var availableLanguages: [String] {
+    open override var availableLanguages: [String] {
         var availableLanguages = bundle.localizations
         if let indexOfBase = availableLanguages.firstIndex(of: "Base") {
             availableLanguages.remove(at: indexOfBase)
