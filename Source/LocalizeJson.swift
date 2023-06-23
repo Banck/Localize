@@ -126,7 +126,7 @@ open class LocalizeJson: LocalizeCommonProtocol {
     /// That prevent replace untagged values
     ///
     /// - returns: localized key or same text
-    public override func localize(key: String, tableName: String? = nil) -> String {
+    open override func localize(key: String, tableName: String? = nil) -> String {
         guard let json = readJSON(tableName: tableName) else {
             return key
         }

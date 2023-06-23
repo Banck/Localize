@@ -33,7 +33,7 @@ open class LocalizeStrings: LocalizeCommonProtocol {
     /// That prevent replace untagged values
     ///
     /// - returns: localized key or same text
-    public override func localize(key: String, tableName: String? = nil) -> String {
+    open override func localize(key: String, tableName: String? = nil) -> String {
         let tableName = tableName ?? fileName
 
         // First, try to find translation in currentLanguage.
