@@ -16,15 +16,6 @@ public extension String {
     /// that prevent replace untagged values
     ///
     /// - returns: localized key or same text
-    var localized: String {
-        return Localize.localize(key: self)
-    }
-
-    /// Localize a string using your JSON File
-    /// If the key is not found return the same key
-    /// that prevent replace untagged values
-    ///
-    /// - returns: localized key or same text
     func localize() -> String {
         return Localize.localize(key: self)
     }

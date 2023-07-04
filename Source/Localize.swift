@@ -143,7 +143,7 @@ public class Localize: NSObject {
     /// - returns: boolean value determining whether a localized string exists for give key
     public func localizeExists(forKey key: String, table: String? = nil) -> Bool {
         guard let table = table else {
-            return key.localized != key
+            return key.localize() != key
         }
         return key.localize(tableName: table) != key
     }
