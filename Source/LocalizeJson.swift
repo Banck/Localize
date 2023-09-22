@@ -127,11 +127,10 @@ open class LocalizeJson: LocalizeCommonProtocol {
     ///
     /// - returns: localized key or same text
     open override func localize(key: String, tableName: String? = nil) -> String {
-        guard let json = readJSON(tableName: tableName) else {
-            return key
-        }
-
-        if let string = json.valueFor(key: key) {
+        if
+            let json = readJSON(tableName: tableName),
+            let string = json.valueFor(key: key)
+        {
             return string
         }
 
